@@ -13,15 +13,13 @@ TxTable 允许通过任意字符串间隔创建表格，而无需再为表格创
 - HTML
 - Markdown
 
-![功能选择](https://raw.githubusercontent.com/Exisi/TxTable/main/img/1.jpg)
-
 ## HTML
 
-![HTML](https://raw.githubusercontent.com/Exisi/TxTable/main/img/2.jpg)
+![HTML](https://raw.githubusercontent.com/Exisi/TxTable/main/img/1.jpg)
 
 ### Markdown
 
-![Markdown](https://raw.githubusercontent.com/Exisi/TxTable/main/img/3.jpg)
+![Markdown](https://raw.githubusercontent.com/Exisi/TxTable/main/img/2.jpg)
 
 ## 高级设置
 
@@ -34,7 +32,7 @@ TxTable 允许通过任意字符串间隔创建表格，而无需再为表格创
 - 去除前后空白
 - 去除空行
 
-![高级设置](https://raw.githubusercontent.com/Exisi/TxTable/main/img/4.jpg)
+![高级设置](https://raw.githubusercontent.com/Exisi/TxTable/main/img/3.jpg)
 
 高级设置保存于 Session 中，关闭标签页后，设置会清空。
 
@@ -44,8 +42,8 @@ TxTable 允许通过任意字符串间隔创建表格，而无需再为表格创
 
 启用正则表达式功能后会默认添加 `/ /` ，仅需要输入正则
 
-![正则设置](https://raw.githubusercontent.com/Exisi/TxTable/main/img/5.jpg)
+![正则设置](https://raw.githubusercontent.com/Exisi/TxTable/main/img/4.jpg)
 
 通过使用正则，您可以增加空格的对原有的文本进行对齐而不影响表格的生成。
 
-![结果](https://raw.githubusercontent.com/Exisi/TxTable/main/img/6.jpg)
+![结果](https://raw.githubusercontent.com/Exisi/TxTable/main/img/5.jpg)
