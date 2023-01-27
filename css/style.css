@@ -215,7 +215,12 @@ body {
 }
 
 .option > #svg-html {
-	fill: #51cf8e;
+	height: 30px;
+	background: #51cf8e;
+	padding: 5px 0;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin: 5px;
 }
 
 .option > #svg-markdown {
@@ -223,11 +228,11 @@ body {
 }
 
 #svg-html:hover {
-	fill: #7ae4ad;
+	background: #7ae4ad;
 }
 
 #svg-html:active {
-	fill: #51cf8e;
+	background: #51cf8e;
 }
 
 #svg-markdown:hover {
