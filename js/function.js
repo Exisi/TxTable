@@ -61,10 +61,10 @@
 
 	function getModel(checkbox) {
 		let model;
-		for (const i in checkbox) {
-			if (!checkbox[i].nodeType > 0) continue;
-			if (!checkbox[i].checked) continue;
-			model = checkbox[i].getAttribute("value");
+		for (const check of checkbox) {
+			if (!check.nodeType > 0) continue;
+			if (!check.checked) continue;
+			model = check.getAttribute("value");
 		}
 		return model;
 	}
