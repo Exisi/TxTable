@@ -12,10 +12,10 @@
 	};
 
 	let options = document.getElementsByClassName("option");
-	for (const i in options) {
-		if (!options[i].nodeType > 0) continue;
-		options[i].addEventListener("click", (e) => {
-			let name = options[i].getElementsByClassName("model-switch")[0].getAttribute("value");
+	for (const func of options) {
+		if (!func.nodeType > 0) continue;
+		func.addEventListener("click", (e) => {
+			let name = func.getElementsByClassName("model-switch")[0].getAttribute("value");
 			setThemeColor(name);
 			checkFunc(name);
 		});
