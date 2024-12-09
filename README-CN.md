@@ -27,7 +27,7 @@ Docs: English | [中文](https://github.com/Exisi/TxTable/blob/main/README-CN.md
 
 ### Markdown
 
-![Markdown](https://raw.githubusercontent.com/Exisi/TxTable/main/zh/img/2.jpg)
+![Markdown](https://raw.githubusercontent.com/Exisi/TxTable/main/img/zh/2.jpg)
 
 ## 高级设置
 
