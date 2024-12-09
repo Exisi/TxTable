@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title aria-label="title">文本转表格工具</title>
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<script src="./lib/marked.min.js"></script>
+	<body>
+		<div id="header">
+			<div class="left">
+				<a href="">
+					<img class="logo" src="./favicon.ico" alt="logo" />
+					<span aria-label="TxTable">TxTable</span>
+				</a>
+			</div>
+			<div class="right">
+				<select name="locale-options" id="locale-options">
+					<option value="en">English</option>
+					<option value="zh">中文简体</option>
+				</select>
+				<a
+					target="_blank"
+					rel="noopener"
+					class="chakra-link"
+					href="https://github.com/Exisi/TxTable">
+					<svg
+						stroke="currentColor"
+						fill="currentColor"
+						stroke-width="0"
+						viewBox="0 0 496 512"
+						aria-hidden="true"
+						focusable="false"
+						height="1em"
+						width="1em"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div id="main">
+			<div class="textarea">
+				<textarea name="input" class="input"></textarea>
+			</div>
+			<div class="config">
+				<div class="box-option">
+					<div class="option">
+						<input type="checkbox" class="model-switch" value="HTML" checked="checked" />
+						<svg
+							id="svg-html"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 640 512"
+							height="2em"
+							width="3em">
+							<path
+								d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"
+								fill="#fff"
+								stroke="#fff"
+								stroke-width="20" />
+						</svg>
+						<span>HTML</span>
+					</div>
+					<div class="option">
+						<input type="checkbox" class="model-switch" value="Markdown" />
+						<svg
+							id="svg-markdown"
+							height="2em"
+							width="5em"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 640 512">
+							<!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+							<path
+								d="M593.8 59.1H46.2C20.7 59.1 0 79.8 0 105.2v301.5c0 25.5 20.7 46.2 46.2 46.2h547.7c25.5 0 46.2-20.7 46.1-46.1V105.2c0-25.4-20.7-46.1-46.2-46.1zM338.5 360.6H277v-120l-61.5 76.9-61.5-76.9v120H92.3V151.4h61.5l61.5 76.9 61.5-76.9h61.5v209.2zm135.3 3.1L381.5 256H443V151.4h61.5V256H566z" />
+						</svg>
+						<span>Markdown</span>
+					</div>
+				</div>
+				<div class="setting">
+					<div class="left">
+						<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+							<g
+								fill="none"
+								fill-rule="evenodd"
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								transform="translate(3 3)">
+								<path
+									d="m7.5.5c.35132769 0 .69661025.02588228 1.03404495.07584411l.50785434 1.53911115c.44544792.12730646.86820077.30839026 1.26078721.53578009l1.4600028-.70360861c.5166435.39719686.9762801.86487779 1.3645249 1.388658l-.7293289 1.44720284c.2201691.39604534.3936959.82158734.5131582 1.2692035l1.5298263.5338186c.0390082.29913986.0591302.60421522.0591302.91399032 0 .35132769-.0258823.69661025-.0758441 1.03404495l-1.5391112.50785434c-.1273064.44544792-.3083902.86820077-.5357801 1.26078721l.7036087 1.4600028c-.3971969.5166435-.8648778.9762801-1.388658 1.3645249l-1.4472029-.7293289c-.39604532.2201691-.82158732.3936959-1.26920348.5131582l-.5338186 1.5298263c-.29913986.0390082-.60421522.0591302-.91399032.0591302-.35132769 0-.69661025-.0258823-1.03404495-.0758441l-.50785434-1.5391112c-.44544792-.1273064-.86820077-.3083902-1.26078723-.5357801l-1.46000277.7036087c-.51664349-.3971969-.97628006-.8648778-1.36452491-1.388658l.72932886-1.4472029c-.2203328-.39633993-.39395403-.82222042-.51342462-1.27020241l-1.52968981-.53381682c-.03892294-.29882066-.05900023-.60356226-.05900023-.91299317 0-.35132769.02588228-.69661025.07584411-1.03404495l1.53911115-.50785434c.12730646-.44544792.30839026-.86820077.53578009-1.26078723l-.70360861-1.46000277c.39719686-.51664349.86487779-.97628006 1.388658-1.36452491l1.44720284.72932886c.39633995-.2203328.82222044-.39395403 1.27020243-.51342462l.53381682-1.52968981c.29882066-.03892294.60356226-.05900023.91299317-.05900023z"
+									stroke-width=".933" />
+								<circle cx="7.5" cy="7.5" r="3" />
+							</g>
+						</svg>
+						<span aria-label="advancedOptions">Advanced Options</span>
+					</div>
+					<div class="right">
+						<div class="setting-base">
+							<button class="copy" aria-label="copy">Copy</button>
+							<button class="reset" aria-label="reset">Reset</button>
+						</div>
+					</div>
+				</div>
+				<dialog class="dialog-box setting-advanced">
+					<div class="dialog-container">
+						<div class="dialog-header">
+							<span class="dialog-title" aria-label="advancedOptions">Advanced Options</span>
+							<span class="dialog-close">×</span>
+						</div>
+						<div class="dialog-main">
+							<div class="setting-advanced setting-html" data-model="HTML">
+								<fieldset>
+									<legend aria-label="format">Format</legend>
+
+									<span aria-label="separator">Separator</span>：<input
+										type="text"
+										class="rule split"
+										list="split-option" />
+									<datalist id="split-option">
+										<option value="," aria-label="comma">逗号</option>
+										<option value=";" aria-label="semicolon">分号</option>
+										<option value="|" aria-label="vertical_bar">竖线</option>
+									</datalist>
+									<span>
+										<input type="checkbox" class="rule regex" id="regex" />
+										<span aria-label="regex">正则表达式</span>
+									</span>
+								</fieldset>
+
+								<fieldset>
+									<legend aria-label="optimize">优化</legend>
+
+									<input type="checkbox" class="rule pre-suf-blank" id="pre-suf-blank" />
+									<label for="pre-suf-blank" aria-label="preSufBlank">去除前后空格</label>
+
+									<input type="checkbox" class="rule blank-row" id="blank-row" />
+									<label for="blank-row" aria-label="blankRow">移除空行</label>
+								</fieldset>
+							</div>
+						</div>
+						<div class="dialog-footer">
+							<button class="confirm-btn" aria-label="confirm">确认</button>
+							<button class="close-btn" aria-label="close">关闭</button>
+						</div>
+					</div>
+				</dialog>
+			</div>
+			<div class="result">
+				<div class="output"></div>
+				<textarea class="source"></textarea>
+			</div>
+		</div>
+		<div id="footer">
+			<span> Copyright ©2023 <a href="https://exi.ink">Exisi</a> All Rights Reserved </span>
+		</div>
+		<script src="./js/main.js"></script>
+		<script src="./js/config/i18n.js"></script>
+		<script src="./js/config/theme.js"></script>
+		<script src="./js/config/setting.js"></script>
+		<script src="./js/utils/dialog.js"></script>
+	</body>
+</html>
