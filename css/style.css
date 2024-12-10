@@ -308,6 +308,11 @@ body {
 	box-sizing: border-box;
 }
 
+.dialog-main fieldset div {
+	display: inline;
+	margin-right: 10px;
+}
+
 .dialog-footer {
 	padding: 15px 0;
 	border-top: 1px solid #ccc;
@@ -412,9 +417,9 @@ body {
 }
 
 @media (max-width: 800px) {
-	fieldset span {
-		margin-top: 20px;
+	.dialog-main fieldset div {
 		display: block;
+		margin-top: 5px;
 	}
 
 	.setting > .left {

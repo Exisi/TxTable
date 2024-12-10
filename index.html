@@ -115,30 +115,35 @@
 							<div class="setting-advanced setting-html" data-model="HTML">
 								<fieldset>
 									<legend aria-label="format">Format</legend>
-
-									<span aria-label="separator">Separator</span>：<input
-										type="text"
-										class="rule split"
-										list="split-option" />
-									<datalist id="split-option">
-										<option value="," aria-label="comma">逗号</option>
-										<option value=";" aria-label="semicolon">分号</option>
-										<option value="|" aria-label="vertical_bar">竖线</option>
-									</datalist>
-									<span>
-										<input type="checkbox" class="rule regex" id="regex" />
-										<span aria-label="regex">正则表达式</span>
-									</span>
+									<div>
+										<span aria-label="separator">Separator</span>：<input
+											type="text"
+											class="rule split"
+											list="split-option" />
+										<datalist id="split-option">
+											<option value="," aria-label="comma">逗号</option>
+											<option value=";" aria-label="semicolon">分号</option>
+											<option value="|" aria-label="vertical_bar">竖线</option>
+										</datalist>
+									</div>
+									<div>
+										<span>
+											<input type="checkbox" class="rule regex" id="regex" />
+											<span aria-label="regex">正则表达式</span>
+										</span>
+									</div>
 								</fieldset>
 
 								<fieldset>
 									<legend aria-label="optimize">优化</legend>
-
-									<input type="checkbox" class="rule pre-suf-blank" id="pre-suf-blank" />
-									<label for="pre-suf-blank" aria-label="preSufBlank">去除前后空格</label>
-
-									<input type="checkbox" class="rule blank-row" id="blank-row" />
-									<label for="blank-row" aria-label="blankRow">移除空行</label>
+									<div>
+										<input type="checkbox" class="rule pre-suf-blank" id="pre-suf-blank" />
+										<label for="pre-suf-blank" aria-label="preSufBlank">去除前后空格</label>
+									</div>
+									<div>
+										<input type="checkbox" class="rule blank-row" id="blank-row" />
+										<label for="blank-row" aria-label="blankRow">移除空行</label>
+									</div>
 								</fieldset>
 							</div>
 						</div>
