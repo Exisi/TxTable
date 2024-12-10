@@ -6,7 +6,7 @@
 
 <p>TxTable 允许通过任意字符串间隔创建表格，而无需再为表格创建新的行和列，表格的转换始终是实时的。</p>
 
-<!-- Demo: [TxTable]() -->
+Demo: [TxTable](exisi.github.io/TxTable/)
 
 Docs: English | [中文](https://github.com/Exisi/TxTable/blob/main/README-CN.md)
 

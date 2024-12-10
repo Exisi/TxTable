@@ -6,7 +6,7 @@
 
 <p>It eliminates the need to manually create rows and columns for table, ensuring real-time conversion.</p>
 
-<!-- Demo: [TxTable]() -->
+Demo: [TxTable](exisi.github.io/TxTable/)
 
 Docs: English | [中文](https://github.com/Exisi/TxTable/blob/main/README-CN.md)
 
