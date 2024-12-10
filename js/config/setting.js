@@ -70,8 +70,7 @@
 			if (["regex", "pre_suf_blank", "blank_row"].includes(key)) {
 				ruleSetting[key].checked = ruleSaving[key] == "true" ? true : false;
 			} else {
-				ruleSetting[key].value = ruleSaving[key];
-				console.log(ruleSaving[key]);
+				ruleSetting[key].value = ruleSaving[key] == " " ? "" : ruleSaving[key];
 			}
 		});
 	}
