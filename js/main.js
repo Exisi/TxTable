@@ -49,7 +49,7 @@
 	});
 	function getRule() {
 		let rule = {
-			split: localStorage.getItem("split") == "" ? " " : localStorage.getItem("split"),
+			split: localStorage.getItem("split") == "" ? " " : localStorage.getItem("split") ?? " ",
 			regex: localStorage.getItem("regex"),
 			blank_row: localStorage.getItem("blank_row"),
 			pre_suf_blank: localStorage.getItem("pre_suf_blank"),

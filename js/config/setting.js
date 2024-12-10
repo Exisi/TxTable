@@ -22,7 +22,8 @@
 	});
 
 	/* advanced setting */
-	const confirmBtn = document.querySelectorAll(".confirm-btn")[0];
+	const confirmBtn = document.querySelector(".confirm-btn");
+	const resetBtn = document.querySelector(".reset-btn");
 	const option = document.getElementsByClassName("setting")[0].getElementsByClassName("left")[0];
 	const dialog = document.getElementsByClassName("setting-advanced")[0];
 	option.addEventListener("click", () => {
@@ -30,6 +31,10 @@
 	});
 	confirmBtn.addEventListener("click", () => {
 		save();
+		dialog.close();
+	});
+	resetBtn.addEventListener("click", () => {
+		reset();
 		dialog.close();
 	});
 
@@ -69,5 +74,12 @@
 				console.log(ruleSaving[key]);
 			}
 		});
+	}
+
+	function reset() {
+		localStorage.removeItem("split");
+		localStorage.removeItem("regex");
+		localStorage.removeItem("pre_suf_blank");
+		localStorage.removeItem("blank_row");
 	}
 })();

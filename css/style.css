@@ -320,6 +320,7 @@ body {
 	justify-content: flex-end;
 }
 
+.dialog-footer > .reset-btn,
 .dialog-footer > .confirm-btn,
 .dialog-footer > .close-btn {
 	background: var(--primary-color);
@@ -329,6 +330,7 @@ body {
 	margin: 0 5px;
 	border-radius: 2px;
 	cursor: pointer;
+	width: 80px;
 }
 
 .dialog-footer > .confirm-btn + .dialog-footer > .close-btn:hover {
@@ -432,6 +434,16 @@ body {
 
 	.dialog-container {
 		width: 70%;
+	}
+
+	.dialog-footer {
+		justify-content: center;
+	}
+
+	.dialog-footer > .reset-btn,
+	.dialog-footer > .confirm-btn,
+	.dialog-footer > .close-btn {
+		padding: 5px;
 	}
 }
 
