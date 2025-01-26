@@ -2,9 +2,7 @@
   <img style="text-align:center" src=https://raw.githubusercontent.com/Exisi/TxTable/main/favicon.ico width=15% />
   <h1>TxTable</h1>
 
-<p>文本转表格工具，用于为 HTML 和 Markdown 快速生成表格</p>
-
-<p>TxTable 允许通过任意字符串间隔创建表格，而无需再为表格创建新的行和列，表格的转换始终是实时的。</p>
+<p>文本转表格工具，用于为 HTML 和 Markdown 快速生成表格。TxTable 允许通过任意字符串间隔创建表格，而无需再为表格创建新的行和列，表格的转换始终是实时的。</p>
 
 Demo: [TxTable](https://exisi.github.io/TxTable/)
 
