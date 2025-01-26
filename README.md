@@ -19,7 +19,8 @@ The theme of the interface corresponds to the color of the function, and differe
 - HTML
 - Markdown
 
-## HTML
+## Preview
+### HTML
 
 ![HTML](https://raw.githubusercontent.com/Exisi/TxTable/main/doc/en/1.jpg)
 
@@ -27,8 +28,9 @@ The theme of the interface corresponds to the color of the function, and differe
 
 ![Markdown](https://raw.githubusercontent.com/Exisi/TxTable/main/doc/en/2.jpg)
 
-## Advanced Settings
+## Settings
 
+### Advanced Setting
 By default, text is split using a single space, but the delimiter can also be customized through advanced settings.
 
 Available settings include:
@@ -40,7 +42,7 @@ Available settings include:
 
 ![Advanced Settings](https://raw.githubusercontent.com/Exisi/TxTable/main/doc/en/3.jpg)
 
-## Using Regular Expressions for Delimiters
+### Delimiters Setting
 
 A regular expression delimiter splitting feature is provided, which is disabled by default.
 

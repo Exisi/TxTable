@@ -21,7 +21,9 @@ Docs: English | [中文](https://github.com/Exisi/TxTable/blob/main/README-CN.md
 - HTML
 - Markdown
 
-## HTML
+## 预览
+
+### HTML
 
 ![HTML](https://raw.githubusercontent.com/Exisi/TxTable/main/doc/zh/1.jpg)
 
@@ -29,8 +31,8 @@ Docs: English | [中文](https://github.com/Exisi/TxTable/blob/main/README-CN.md
 
 ![Markdown](https://raw.githubusercontent.com/Exisi/TxTable/main/doc/zh/2.jpg)
 
-## 高级设置
-
+## 设置
+### 高级设置
 默认使用单个空格对文本进行分割，也可以通过高级设置对分隔符进行自定义。
 
 提供的设置：
@@ -42,7 +44,7 @@ Docs: English | [中文](https://github.com/Exisi/TxTable/blob/main/README-CN.md
 
 ![高级设置](https://raw.githubusercontent.com/Exisi/TxTable/main/doc/zh/3.jpg)
 
-## 为分割符使用正则表达式
+### 分割符设置
 
 提供了正则表达式的分割功能，需要将其启用，默认关闭。
 
