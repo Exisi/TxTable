@@ -2,9 +2,7 @@
   <img style="text-align:center" src=https://raw.githubusercontent.com/Exisi/TxTable/main/favicon.ico width=15% />
   <h1>TxTable</h1>
 
-<p>TxTable is a utility designed to quickly generate table for HTML and Markdown from any string separated by a delimiter.</p>
-
-<p>It eliminates the need to manually create rows and columns for table, ensuring real-time conversion.</p>
+<p>TxTable is a tool to quickly generate table for HTML and Markdown from any string separated by a delimiter. It eliminates the need to manually create rows and columns for table, ensuring real-time conversion.</p>
 
 Demo: [TxTable](https://exisi.github.io/TxTable/)
 
